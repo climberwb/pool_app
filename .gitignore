@@ -1,0 +1,4 @@
+pool_app/bin/*
+pool_app/local/*
+pool_app/lib/*
+pool_app/include/*

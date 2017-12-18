@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% load bootstrap3 %}
+
+
+{%block body_content%} 
+ 
+         <table class="table">
+            <thead>
+              <tr>
+                <th>winner</th>
+                <th>loser</th>
+                <th>date</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for g in games%}
+                    <tr>
+                        <td>{{g.winner}}</td>
+                        <td>{{g.loser}}</td>
+                        <td>{{g.created_at}}</td>
+                    </tr>
+                {%endfor%}
+            </tbody>
+          </table>
+    
+    
+{% endblock%}

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% load static from staticfiles %}
+{% block title %} Pool App!{% endblock %}
+<div class="container-fluid">
+{%block body_content%} 
+         {%if wins%}
+             <table class="table">
+                <thead>
+                  <tr>
+                    <th>winner</th>
+                    <th>total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for w in wins %}
+                        <tr>
+                            <td>{{w.name}}</td>
+                            <td>{{w.total}}</td>
+                    {%endfor%}
+                </tbody>
+              </table>
+     {%else%}
+     <div >
+         <center>You have no games please create players and games</center>
+     </div>
+     {% endif%}
+{% endblock%}
+</div>

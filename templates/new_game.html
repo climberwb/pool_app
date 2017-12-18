@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% load bootstrap3 %}
+
+
+{%block body_content%} 
+<form  method="POST" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+         <!--<input type="submit" class="btn btn-primary" value="New Player">-->
+        <button type="submit" class="btn btn-primary">
+             New Game
+        </button>
+    {% endbuttons %}
+</form>
+{% endblock body_content%}
